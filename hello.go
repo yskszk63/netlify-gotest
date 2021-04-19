@@ -13,6 +13,7 @@ func background() {
 }
 
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
+    fmt.Println("BEGIN")
     go background()
     return &events.APIGatewayProxyResponse {
         StatusCode: 200,
